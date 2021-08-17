@@ -9,17 +9,18 @@
 </head>
 <body>
   <header>
-  <h1>Meme Generator Trybe</h1>
+  <h1 class="title">Meme Generator Trybe</h1>
   </header>
   <main>
     <article>
-      <section>
+      <section class="input-container">
+        <label for="text-input">Texto:</label>
         <input id="text-input" type="text">
-        <input id="meme-insert" type="image">
+        <label for="meme-insert">Foto:</label>
+        <input id="meme-insert" type="file" name="img" accept="image/*">
       </section>
       <section id="meme-image-container">
         <p id="meme-text"></p>
-        <img src="" alt="" id="meme-image">
       </section>
     </article>
     

@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 8px;
+}
+
+.title {
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  margin-bottom: 30px;
+}
+
+.input-container {
+  margin-left: 25%;
+  margin-bottom: 30px;
+}
+
+#text-input {
+  margin-right: 100%;
+  margin-bottom: 15px
+}
+
+#meme-image-container {
+  position: relative;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid black;
+  height: 500px;
+  color: white;
+  text-align: center;
+}
+
+#meme-text {
+  position: absolute;
+  bottom: 50px;
+  font-size: 24px;
+  left: 50%;
+  transform: translateX(-38%)
+}
