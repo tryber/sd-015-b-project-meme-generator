@@ -1,0 +1,25 @@
+#meme-text {
+  margin: 0 15px;
+  z-index: 2;
+  position: absolute;
+  height: 300px;
+  width: 250px;
+  font-size: larger;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#meme-image-container {
+  margin-top: 20px;
+  height: 300px;
+  width: 300px;
+  z-index: 1;
+  background-color: white;
+  border: black solid 1px;
+}
+
+#meme-image-container img{
+  height: 300px;
+  width: 300px;
+  position: absolute;
+  z-index: 1;
+}
