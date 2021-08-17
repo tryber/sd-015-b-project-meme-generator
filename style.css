@@ -27,12 +27,15 @@ body {
   position: relative;
   margin-left: 50%;
   transform: translateX(-50%);
-  border: 1px solid black;
   width: 900px;
   height: 500px;
   color: white;
   background-color: white;
   text-align: center;
+}
+
+.default-border {
+  border: 1px solid black;
 }
 
 #meme-text {
@@ -42,4 +45,43 @@ body {
   left: 50%;
   transform: translateX(-50%);
   text-shadow: rgb(0, 0, 0) 5px 5px 5px;
+}
+
+.buttons-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.button {
+  display: inline-block;
+  font-size: 36px;
+  margin-right: 50px;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  width: 150px;
+}
+
+#fire {
+  background-color: red;
+}
+
+#water {
+  background-color: blue;
+}
+
+#earth {
+  background-color: green;
+}
+
+.fire-border {
+  border: 3px dashed red;
+}
+
+.water-border {
+  border: 5px double blue;
+}
+
+.earth-border {
+  border: 6px groove green;
 }

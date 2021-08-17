@@ -1,4 +1,18 @@
+//utils
 
+function addEventListenerToArray(array, eventType, func) {
+  for (let item of array) {
+    item.addEventListener(eventType, func);
+  }
+}
+
+// 6
+
+function setElementBorder(event) {
+  const button = event.target;
+  const imgContainer = document.getElementById("meme-image-container");
+  imgContainer.className = button.classList[1];
+}
 
 // 4
 
@@ -9,7 +23,7 @@ function handleFiles(files) {
     img.src = window.URL.createObjectURL(files[0]);
     img.height = 500;
     img.width = 900;
-    img.id = "meme-image"
+    img.id = "meme-image";
     img.onload = function(e) {
       window.URL.revokeObjectURL(this.src);
     }
@@ -35,6 +49,8 @@ function startEventListeners() {
   textInput.addEventListener("keyup", setMemeText)
   const imageInput = document.getElementById("meme-insert");
   imageInput.addEventListener("change", setMemeImage);
+  const elementButtons = document.getElementsByClassName("button");
+  addEventListenerToArray(elementButtons, "click", setElementBorder)
 }
 
 
