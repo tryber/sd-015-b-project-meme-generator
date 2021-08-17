@@ -3,3 +3,22 @@
   height: 400px;
   border: 1px solid black;
 }
+
+#meme-image {
+  width: 400px;
+  height: 400px;
+  object-fit: fill;
+  z-index: 0;
+  position: absolute;
+}
+
+#meme-text {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+#meme-image-container {
+  position: relative;
+}
