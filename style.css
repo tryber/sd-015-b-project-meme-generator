@@ -1,8 +1,9 @@
 #meme-image-container {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   border: 1px solid black;
   position: relative;
+  margin-top: 20px;
 }
 
 #meme-text {
