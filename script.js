@@ -4,9 +4,6 @@ const imageInput = document.getElementById('meme-insert');
 const memeImageContainer = document.getElementById('meme-image-container');
 const memeText = document.getElementById('meme-text');
 const memeImage = document.getElementById('meme-image');
-const fireButton = document.getElementById('fire');
-const waterButton = document.getElementById('water');
-const earthButton = document.getElementById('earth');
 
 function addText() {
   const inputValue = textInput.value;
@@ -14,58 +11,54 @@ function addText() {
 }
 textInput.addEventListener('keyup', addText);
 
-// Source: https://stackoverflow.com/questions/49942611/how-to-display-a-photo-uploaded-by-user-in-html-and-javascript
+// Source: https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded/27165977#27165977
 // Source: https://stackoverflow.com/questions/3029422/how-do-i-auto-resize-an-image-to-fit-a-div-container
-function addImage(image) {
-  const reader = new FileReader();
-  // when read operation is finished, onload is triggered, and file is represented as base64 encoded string
-  reader.readAsDataURL(image);
-  reader.onload = function setSource(originEvent) {
-    memeImage.style.height = '100%';
-    memeImage.style.width = '100%';
-    memeImage.src = originEvent.target.result;
-  };
+function addImage(urlObject) {
+  memeImage.src = urlObject;
+  memeImage.style.height = '100%';
+  memeImage.style.width = '100%';
 }
 
-// Source: https://betterprogramming.pub/handling-file-inputs-with-javascript-9f2d3a007f05
+// Source: https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded/27165977#27165977
 function getImageInput() {
   const selectedImage = imageInput.files[0];
+  const urlObject = URL.createObjectURL(selectedImage);
   if (selectedImage) {
-    addImage(selectedImage);
+    addImage(urlObject);
   }
 }
 imageInput.addEventListener('change', getImageInput);
 
-function setFire(buttonPressed) {
-  const buttonProperties = getComputedStyle(buttonPressed);
-  const backgroundColor = buttonProperties.getPropertyValue('background-color');
+function setFire(backgroundColor) {
   const borderImageContainer = `3px dashed ${backgroundColor}`;
   memeImageContainer.style.setProperty('border', borderImageContainer);
 }
 
-function setWater(buttonPressed) {
-  const buttonProperties = getComputedStyle(buttonPressed);
-  const backgroundColor = buttonProperties.getPropertyValue('background-color');
+function setWater(backgroundColor) {
   const borderImageContainer = `5px double ${backgroundColor}`;
   memeImageContainer.style.setProperty('border', borderImageContainer);
 }
 
-function setEarth(buttonPressed) {
-  const buttonProperties = getComputedStyle(buttonPressed);
-  const backgroundColor = buttonProperties.getPropertyValue('background-color');
+function setEarth(backgroundColor) {
   const borderImageContainer = `6px groove ${backgroundColor}`;
   memeImageContainer.style.setProperty('border', borderImageContainer);
 }
 
 function checkButton(originEvent) {
   const buttonPressed = originEvent.target;
+  const stringBackground = 'background-color';
   if (buttonPressed.id === 'fire') {
-    setFire(buttonPressed);
+    const buttonProperties = getComputedStyle(buttonPressed);
+    const backgroundColor = buttonProperties.getPropertyValue(stringBackground);
+    setFire(backgroundColor);
   } else if (buttonPressed.id === 'water') {
-    setWater(buttonPressed);
+    const buttonProperties = getComputedStyle(buttonPressed);
+    const backgroundColor = buttonProperties.getPropertyValue(stringBackground);
+    setWater(backgroundColor);
   } else if (buttonPressed.id === 'earth') {
-    setEarth(buttonPressed);
+    const buttonProperties = getComputedStyle(buttonPressed);
+    const backgroundColor = buttonProperties.getPropertyValue(stringBackground);
+    setEarth(backgroundColor);
   }
 }
 body.addEventListener('click', checkButton);
-
