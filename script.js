@@ -1,7 +1,12 @@
+const body = document.querySelector('body');
 const textInput = document.getElementById('text-input');
 const imageInput = document.getElementById('meme-insert');
+const memeImageContainer = document.getElementById('meme-image-container');
 const memeText = document.getElementById('meme-text');
 const memeImage = document.getElementById('meme-image');
+const fireButton = document.getElementById('fire');
+const waterButton = document.getElementById('water');
+const earthButton = document.getElementById('earth');
 
 function addText() {
   const inputValue = textInput.value;
@@ -30,3 +35,37 @@ function getImageInput() {
   }
 }
 imageInput.addEventListener('change', getImageInput);
+
+function setFire(buttonPressed) {
+  const buttonProperties = getComputedStyle(buttonPressed);
+  const backgroundColor = buttonProperties.getPropertyValue('background-color');
+  const borderImageContainer = `3px dashed ${backgroundColor}`;
+  memeImageContainer.style.setProperty('border', borderImageContainer);
+}
+
+function setWater(buttonPressed) {
+  const buttonProperties = getComputedStyle(buttonPressed);
+  const backgroundColor = buttonProperties.getPropertyValue('background-color');
+  const borderImageContainer = `5px double ${backgroundColor}`;
+  memeImageContainer.style.setProperty('border', borderImageContainer);
+}
+
+function setEarth(buttonPressed) {
+  const buttonProperties = getComputedStyle(buttonPressed);
+  const backgroundColor = buttonProperties.getPropertyValue('background-color');
+  const borderImageContainer = `6px groove ${backgroundColor}`;
+  memeImageContainer.style.setProperty('border', borderImageContainer);
+}
+
+function checkButton(originEvent) {
+  const buttonPressed = originEvent.target;
+  if (buttonPressed.id === 'fire') {
+    setFire(buttonPressed);
+  } else if (buttonPressed.id === 'water') {
+    setWater(buttonPressed);
+  } else if (buttonPressed.id === 'earth') {
+    setEarth(buttonPressed);
+  }
+}
+body.addEventListener('click', checkButton);
+
