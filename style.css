@@ -38,7 +38,8 @@ body {
 #meme-text {
   position: absolute;
   bottom: 50px;
-  font-size: 24px;
+  font-size: 30px;
   left: 50%;
-  transform: translateX(-38%)
+  transform: translateX(-50%);
+  text-shadow: rgb(0, 0, 0) 5px 5px 5px;
 }

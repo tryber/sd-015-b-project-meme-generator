@@ -1,3 +1,7 @@
+
+
+// 4
+
 function handleFiles(files) {
   if (files.length) {
     const imgContainer = document.getElementById("meme-image-container");
