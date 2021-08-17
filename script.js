@@ -5,6 +5,10 @@ const buttonInputImage = document.getElementById('meme-insert');
 const realInputImage = document.getElementById('get-file');
 const textFileImage = document.getElementById('text-file');
 const memeImageBox = document.getElementById('meme-image');
+const buttonFireBorder = document.getElementById('fire');
+const buttonWaterBorder = document.getElementById('water');
+const buttonEarthBorder = document.getElementById('earth');
+const memeContainer = document.getElementById('meme-image-container');
 
 // function to input text in meme-text
 function memeTextInput() {
@@ -21,12 +25,31 @@ buttonInputImage.addEventListener('click', () => {realInputImage.click()});
 // function to put image in meme-image
 function memeImageInput() {
   if (realInputImage.value) {
-    textFileImage.innerText = realInputImage.value;
+    const imageName = realInputImage.value.split('\\');
+    textFileImage.innerText = imageName[imageName.length - 1];
     memeImageBox.src = URL.createObjectURL(realInputImage.files[0]);
   } else {
     textFileImage.innerText = 'No file Choose, yet';
   }
 }
 
-// addEventListener
+// addEventListener to realInputImage
 realInputImage.addEventListener('change', memeImageInput)
+
+// fuction to change border of meme image
+function changeImageBorder(eventoDeOrigem) {
+  const element = eventoDeOrigem.target;
+  const elementId = element.id;
+  if (elementId === 'fire') {
+    memeContainer.style.border = '3px dashed red';
+  } else if (elementId === 'water') {
+    memeContainer.style.border = '5px double blue';
+  } else if (elementId === 'earth') {
+    memeContainer.style.border = '6px groove green';
+  }
+}
+
+// addEventListener to all borderButtons
+buttonFireBorder.addEventListener('click', changeImageBorder);
+buttonWaterBorder.addEventListener('click', changeImageBorder);
+buttonEarthBorder.addEventListener('click', changeImageBorder);
