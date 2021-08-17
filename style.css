@@ -1,4 +1,5 @@
 #meme-image-container {
+  position: absolute;
   margin : 12px;
   height:300px;
   width: 300px;
@@ -7,24 +8,25 @@
   word-break: break-word;
   text-align: center;
   font-family: 'Staatliches', cursive;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 #meme-text {
   position: absolute;
-  top: 35%;
+  top: 60%;
   left: 10%;
   right: 10%;
   padding: 0px;
   color: white;
-  text-shadow: 3px 2px 2px black ;
+  text-shadow: 5px 5px 5px black ;
   z-index: 200;
 }
 
 
 #meme-image {
+  position: relative;
   max-width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 

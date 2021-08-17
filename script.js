@@ -1,9 +1,8 @@
-const buttonGeneratorText = document.getElementById('generateTextMeme');
 const input = document.getElementById('text-input');
+const textMeme = document.getElementById('meme-text');
 
-buttonGeneratorText.addEventListener('click', addText);
+input.addEventListener("keyup",insertText)
 
-function addText() {
-  const tagText = document.getElementById('meme-text');
-  tagText.innerText = input.value;
+function insertText() {
+textMeme.innerText = input.value;
 }
