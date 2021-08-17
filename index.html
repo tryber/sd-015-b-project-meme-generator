@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <input id="text-input">
+    <input type="text" id="text-input" onkeyup="toLimit(this)">
+    <input type="file" id="meme-insert">
     <div id="meme-image-container">
-        <p id="meme-text"></p>
-    </div>
+        <img id="meme-image"></img>
+        <p id="meme-text"></p>    
+        </div>
     <script src="script.js"></script>
 </body>
 </html>
