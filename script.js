@@ -11,6 +11,9 @@ function insertText() {
 }
 
 function insertImage() {
+  if (document.getElementById('meme-image')) {
+    document.getElementById('meme-image').remove();
+  }
   if (inputImage.files.length === 1) {
     const img = document.createElement('img');
     img.id = 'meme-image';
