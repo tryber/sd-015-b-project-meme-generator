@@ -1,7 +1,7 @@
 #meme-image-container {
   width: 200px;
   height: 200px;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   border: 1px solid black;
   position: relative;
   margin-top: 20px;
@@ -9,6 +9,9 @@
 
 #meme-text {
   position: absolute;
-  top: 75%;
-  left: 25%;
+  top: 50%;
+  left: 10%;
+  font-size: 30px;
+  color: white;
+  text-shadow: rgb(0, 0, 0) 5px 5px 5px;
 }
