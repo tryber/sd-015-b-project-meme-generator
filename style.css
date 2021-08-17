@@ -1,0 +1,38 @@
+/* Tags */
+body {
+  font-family: Helvetica;
+}
+
+img {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  font-size: 14px;
+}
+
+/* Seções */
+#meme-image-container {
+  border: 1px solid black;
+  width: 500px;
+  height: 400px;
+  margin-top: 10px;
+  background-image: url("https://indianmemetemplates.com/wp-content/uploads/I-Only-Cried-For-20-Minutes.jpg");
+  background-size: 100% 100%;
+}
+
+/* Elementos */
+#meme-text {
+  font-weight: 1000;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 340px;
+  color: white;
+  text-shadow: 2px 2px black;
+}
+
+#text-input {
+  margin-bottom: 10px;
+}
