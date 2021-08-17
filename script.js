@@ -3,7 +3,42 @@
 function addEventListenerToArray(array, eventType, func) {
   for (let item of array) {
     item.addEventListener(eventType, func);
+    console.log(item)
   }
+}
+
+// 7
+
+function createPreMadeImages() {
+  const preMadeImagesContainer = document.querySelector(".pre-made-images-container")
+  for (let index = 1; index <= 4; index += 1) {
+    img = document.createElement("img");
+    img.width = 200;
+    img.height = 200;
+    img.src = `./imgs/meme${index}.png`;
+    img.id = `meme-${index}`
+    img.className = "pre-made-image";
+    preMadeImagesContainer.appendChild(img);
+  }
+}
+
+function selectPreMadeImage(event) {
+  const actualImg = document.getElementById("meme-image")
+  const preMadeImg = event.target;
+  const preMadeImgSrc = preMadeImg.src
+  if (actualImg) {
+    actualImg.src = preMadeImgSrc
+  } else {
+    const imgContainer =  document.getElementById("meme-image-container");
+    newImg = document.createElement("img");
+    newImg.height = 500;
+    newImg.width = 900;
+    newImg.id = "meme-image";
+    newImg.src = preMadeImgSrc;
+    imgContainer.appendChild(newImg);
+  }
+  
+  
 }
 
 // 6
@@ -32,9 +67,17 @@ function handleFiles(files) {
 }
 
 function setMemeImage(event) {
-  const inputElement = event.target;
-  const inputFiles = inputElement.files;
-  handleFiles(inputFiles);
+  let actualImg = document.getElementById("meme-image");
+  if (actualImg) {
+    actualImg.remove()
+    const inputElement = event.target;
+    const inputFiles = inputElement.files;
+    handleFiles(inputFiles);
+  } else {
+    const inputElement = event.target;
+    const inputFiles = inputElement.files;
+    handleFiles(inputFiles);
+  }
 }
 
 // 1
@@ -51,10 +94,13 @@ function startEventListeners() {
   imageInput.addEventListener("change", setMemeImage);
   const elementButtons = document.getElementsByClassName("button");
   addEventListenerToArray(elementButtons, "click", setElementBorder)
+  const preMadeImages = document.getElementsByClassName("pre-made-image");
+  addEventListenerToArray(preMadeImages, "click", selectPreMadeImage);
 }
 
 
 
 window.onload = function () {
-  startEventListeners()
+  createPreMadeImages();
+  startEventListeners();
 }
