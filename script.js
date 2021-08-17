@@ -18,7 +18,6 @@ function addImage(image) {
   reader.onload = function setSource(originEvent) {
     memeImage.style.height = '100%';
     memeImage.style.width = '100%';
-    memeImage.style.objectFit = 'contain';
     memeImage.src = originEvent.target.result;
   };
 }
