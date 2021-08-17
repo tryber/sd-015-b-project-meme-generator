@@ -6,13 +6,6 @@ const earth = document.getElementById('earth');
 const memeImageContainer = document.getElementById('meme-image-container');
 const memeCollection = document.getElementById('meme-collection');
 const memeImage = document.getElementById('meme-image');
-console.log(memeCollection);
-
-textInput.addEventListener('input', writeInContainer);
-fire.addEventListener('click', putFireInAll);
-water.addEventListener('click', washedAll);
-earth.addEventListener('click', iLikeGreen);
-memeCollection.addEventListener('click', openMeme);
 
 function writeInContainer(event) {
   memeText.innerText = event.target.value;
@@ -46,3 +39,9 @@ function iLikeGreen() {
 function openMeme(event) {
   memeImage.src = event.target.src;
 }
+
+textInput.addEventListener('input', writeInContainer);
+fire.addEventListener('click', putFireInAll);
+water.addEventListener('click', washedAll);
+earth.addEventListener('click', iLikeGreen);
+memeCollection.addEventListener('click', openMeme);
