@@ -45,3 +45,15 @@
 #earth {
   background-color: green;
 }
+
+#meme-1, #meme-2, #meme-3, #meme-4 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  border: 2px solid darkslategrey;
+}
+
+#meme-1:hover, #meme-2:hover, #meme-3:hover, #meme-4:hover {
+  cursor: pointer;
+}
