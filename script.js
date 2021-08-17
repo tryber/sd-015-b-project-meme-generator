@@ -26,7 +26,6 @@ function changeBorder(element) {
 
   if (buttonReference.id === 'fire') {
     conteinerMeme.style.border = '3px dashed red';
-    console.log('teste');
   } else if (buttonReference.id === 'water') {
     conteinerMeme.style.border = '5px double blue';
   } else if (buttonReference.id === 'earth') {
