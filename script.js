@@ -4,6 +4,7 @@ function handleFiles(files) {
     let img = document.createElement("img");
     img.src = window.URL.createObjectURL(files[0]);
     img.height = 500;
+    img.width = 900;
     img.id = "meme-image"
     img.onload = function(e) {
       window.URL.revokeObjectURL(this.src);
