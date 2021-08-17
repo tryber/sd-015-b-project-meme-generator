@@ -32,7 +32,7 @@ header {
   font-size: 30px;
   margin-top: 330px;
   color: white;
-  text-shadow: 2px 2px black;
+  text-shadow: 5px 5px 5px black;
 }
 
 #text-input {
