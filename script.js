@@ -18,8 +18,8 @@ inputText.addEventListener('input', memeTextInput);
 // addEventListener to buttonInputImage for click in real button
 buttonInputImage.addEventListener('click', () => {realInputImage.click()});
 
-// function to 
-function aaa() {
+// function to put image in meme-image
+function memeImageInput() {
   if (realInputImage.value) {
     textFileImage.innerText = realInputImage.value;
     memeImageBox.src = URL.createObjectURL(realInputImage.files[0]);
@@ -29,4 +29,4 @@ function aaa() {
 }
 
 // addEventListener
-realInputImage.addEventListener('change', aaa)
+realInputImage.addEventListener('change', memeImageInput)

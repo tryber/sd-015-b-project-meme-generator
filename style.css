@@ -14,18 +14,18 @@
 }
 
 #meme-text {
-  display: block;
   position: absolute;
   z-index: 1;
   bottom: 0;
+  text-shadow: 5px 5px 5px black;
+  font-size: 30px;
+  color: white;
+  max-width: 380px;
+  margin: 0 10px 10px;
+  overflow-wrap: break-word;
+  justify-content: center;
 }
 
 #meme-image-container {
   position: relative;
-}
-
-#meme-text{
-  text-shadow: 5px 5px 5px black;
-  font-size: 30px;
-  color: white;
 }
