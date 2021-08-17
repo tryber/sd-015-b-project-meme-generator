@@ -9,10 +9,11 @@ const buttonFireBorder = document.getElementById('fire');
 const buttonWaterBorder = document.getElementById('water');
 const buttonEarthBorder = document.getElementById('earth');
 const memeContainer = document.getElementById('meme-image-container');
+const famousMemes = document.querySelectorAll('#memes-conhecidos div');
 
 // function to input text in meme-text
 function memeTextInput() {
-  memeText = inputText.value;
+  const memeText = inputText.value;
   memeTextBox.innerText = memeText;
 }
 
@@ -20,7 +21,7 @@ function memeTextInput() {
 inputText.addEventListener('input', memeTextInput);
 
 // addEventListener to buttonInputImage for click in real button
-buttonInputImage.addEventListener('click', () => {realInputImage.click()});
+buttonInputImage.addEventListener('click', () => { realInputImage.click(); });
 
 // function to put image in meme-image
 function memeImageInput() {
@@ -34,7 +35,7 @@ function memeImageInput() {
 }
 
 // addEventListener to realInputImage
-realInputImage.addEventListener('change', memeImageInput)
+realInputImage.addEventListener('change', memeImageInput);
 
 // fuction to change border of meme image
 function changeImageBorder(eventoDeOrigem) {
@@ -53,3 +54,15 @@ function changeImageBorder(eventoDeOrigem) {
 buttonFireBorder.addEventListener('click', changeImageBorder);
 buttonWaterBorder.addEventListener('click', changeImageBorder);
 buttonEarthBorder.addEventListener('click', changeImageBorder);
+
+// function to pull meme in main image
+function pullFamousMemeAsMain(eventoDeOrigem) {
+  const element = eventoDeOrigem.target;
+  memeImageBox.src = element.src;
+}
+
+// addEventListener to all meme img
+famousMemes[0].addEventListener('click', pullFamousMemeAsMain);
+famousMemes[1].addEventListener('click', pullFamousMemeAsMain);
+famousMemes[2].addEventListener('click', pullFamousMemeAsMain);
+famousMemes[3].addEventListener('click', pullFamousMemeAsMain);
