@@ -14,11 +14,12 @@ header {
 
 /* Seções */
 #meme-image-container {
+  position: relative;
   border: 1px solid black;
+  background-color: white;
   width: 500px;
   height: 400px;
   margin-top: 10px;
-  position: relative;
 }
 
 /* Elementos */
