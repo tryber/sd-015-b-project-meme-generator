@@ -1,9 +1,9 @@
 // Variáveis
-  const textInput = document.querySelector("#text-input");
-  const imgInput = document.querySelector("#meme-insert")
-  const container = document.querySelector("#meme-image-container");
-  const text = document.querySelector("#meme-text");
-  const img = document.querySelector("#meme-image")
+  const textInput = document.querySelector('#text-input');
+  const imgInput = document.querySelector('#meme-insert')
+  const container = document.querySelector('#meme-image-container');
+  const text = document.querySelector('#meme-text');
+  const img = document.querySelector('#meme-image')
 
 // Funções
   function updateText(event) {
