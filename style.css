@@ -8,12 +8,14 @@ h1 {
   border: solid 1px black;
   background-color: white;
 }
+
 #meme-image {
   position: absolute;
   height: 400px;
   width: 400px;
   z-index: 1;
 }
+
 #meme-text {
   position: absolute;
   z-index: 2;
@@ -22,30 +24,36 @@ h1 {
   font-size: 30px;
   color: white;
 }
+
 #earth {
   background-color: green;
   height: 50px;
   width: 120px;
   border-radius: 50%;
 }
+
 #fire {
   background-color: red;
   height: 50px;
   width: 120px;
   border-radius: 50%;
 }
+
 #water {
   background-color: blue;
   height: 50px;
   width: 120px;
   border-radius: 50%;
 }
+
 .botoes {
   height: 100px;
 }
+
 #bibliotecaDeMemes {
   height: 300px;
 }
+
 #meme-1 {
   display: inline-block;
   width: 100px;
@@ -66,12 +74,14 @@ h1 {
   height: 100px;
   border: solid 3px black;
 }
+
 #meme-4 {
   display: inline-block;
   width: 100px;
   height: 100px;
   border: solid 3px black;
 }
+
 #bibliotecaDeMemes img {
   width: 100px;
   height: 100px;
