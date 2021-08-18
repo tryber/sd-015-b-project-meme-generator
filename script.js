@@ -53,12 +53,14 @@ function changeImageBorder(eventoDeOrigem) {
 // addEventListener to all borderButtons
 buttonFireBorder.addEventListener('click', changeImageBorder);
 buttonWaterBorder.addEventListener('click', changeImageBorder);
+buttonWaterBorder.lastElementChild.addEventListener('click', changeImageBorder);
 buttonEarthBorder.addEventListener('click', changeImageBorder);
 
 // function to pull meme in main image
 function pullFamousMemeAsMain(eventoDeOrigem) {
   const element = eventoDeOrigem.target;
   memeImageBox.src = element.src;
+  textFileImage.innerText = element.parentElement.id;
 }
 
 // addEventListener to all meme img
