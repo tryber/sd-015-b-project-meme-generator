@@ -16,6 +16,8 @@ main {
   text-align: center;
   width: 450px;
   height: 450px;
+  border: solid 1px black;
+  background-color: white;
 }
 
 img {
