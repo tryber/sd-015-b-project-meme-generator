@@ -11,7 +11,9 @@ function createTextContainer() {
 
 function addTexttoMeme() {
   const memeText = document.getElementById('meme-text');
-  memeText.innerText = textInput.value;
+  const typedText = textInput.value;
+
+  memeText.innerText = typedText;
 }
 
 textInput.addEventListener('keyup', addTexttoMeme);
@@ -29,7 +31,39 @@ function addImagetoMeme() {
 
 imageInput.addEventListener('change', addImagetoMeme);
 
+function addStyleToBorder(style) {
+  if (style === 'fire') {
+    memeContainer.style.border = '3px dashed red';
+  }
+
+  if (style === 'water') {
+    memeContainer.style.border = '5px double blue';
+  }
+
+  if (style === 'earth') {
+    memeContainer.style.border = '6px groove green';
+  }
+}
+
+function createBorderButtons() {
+  const buttonsContainer = document.getElementById('border-buttons');
+  const buttonsIds = ['fire', 'water', 'earth'];
+  const buttonsColors = ['red', 'blue', 'green'];
+
+  for (let index = 0; index < buttonsIds.length; index += 1) {
+    const button = document.createElement('button');
+    button.id = buttonsIds[index];
+    button.innerText = buttonsIds[index];
+    button.style.textTransform = 'uppercase';
+    button.style.backgroundColor = buttonsColors[index];
+    button.addEventListener('click', () => {
+      addStyleToBorder(buttonsIds[index]);
+    });
+    buttonsContainer.appendChild(button);
+  }
+}
+
 window.onload = () => {
   createTextContainer();
-
-}
+  createBorderButtons();
+};
