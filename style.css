@@ -16,7 +16,7 @@ main {
   text-align: center;
   width: 450px;
   height: 450px;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   background-color: white;
 }
 
@@ -57,4 +57,19 @@ label {
 
 input#file-upload-button {
   background-color: black;
+}
+
+#fire {
+  background-color: red;
+  border-radius: 10px;
+}
+
+#earth {
+  background-color: green;
+  border-radius: 10px;
+}
+
+#water {
+  background-color: blue;
+  border-radius: 10px;
 }
