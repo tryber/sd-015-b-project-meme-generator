@@ -1,63 +1,78 @@
+h1 {
+  text-align: center;
+}
 
- #meme-image-container {
+#meme-image-container {
+  height: 400px;
+  width: 400px;
+  border: solid 1px black;
+  background-color: white;
+}
+#meme-image {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  z-index: 1;
+}
+#meme-text {
+  position: absolute;
+  z-index: 2;
+  left: 50px;
+  text-shadow: black 5px 5px 5px;
+  font-size: 30px;
+  color: white;
+}
+#earth {
+  background-color: green;
+  height: 50px;
+  width: 120px;
+  border-radius: 50%;
+}
+#fire {
+  background-color: red;
+  height: 50px;
+  width: 120px;
+  border-radius: 50%;
+}
+#water {
+  background-color: blue;
+  height: 50px;
+  width: 120px;
+  border-radius: 50%;
+}
+.botoes {
+  height: 100px;
+}
+#bibliotecaDeMemes {
+  height: 300px;
+}
+#meme-1 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid 3px black;
+}
 
-      height: 600px;
-      width: 600px;
-      border: solid 1px black;
-      background-color: white;
+#meme-2 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid 3px black;
+}
 
-  }
-  #meme-image {
-      position: absolute;
-      height: 600px;
-      width: 600px;
-      z-index: 1;
-
-  }
-  #meme-text {
-      position: absolute;
-      z-index: 2;
-      left: 50px;
-      text-shadow: black 5px 5px 5px;
-      font-size: 30px;
-      color: white;
-    }
- #earth {
-     background-color: green;
- }
- #fire {
-     background-color: red;
- }
- #water {
-     background-color: blue;
-
- }
- #bibliotecaDeMemes{
-     height: 200px;
-
- }
- #meme-1 {
-   display: inline-block;
-   width: 60px;
-   height: 60px;
- }
- #meme-2 {
-
-   display: inline-block;
-   width: 60px;
-   height: 60px;
- }
- #meme-3 {
-   display: inline-block;
-   width: 60px;
-   height: 60px;
- }
- #meme-4{
-   display: inline-block;
-   width: 60px;
-   height: 60px;
- }
+#meme-3 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid 3px black;
+}
+#meme-4 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  border: solid 3px black;
+}
 #bibliotecaDeMemes img {
-    width: 60px;
-    height: 60px;
+  width: 100px;
+  height: 100px;
 }
