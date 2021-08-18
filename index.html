@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Gerador de Meme</h1>
+    <h3>Texto</h3>
+    <input type="text" id="text-input" onkeyup="toLimit(this)">
+    <h3>Foto</h3>
+    <input type="file" id="meme-insert">
+    <div id="meme-image-container">
+        <img id="meme-image"></img>
+        <p id="meme-text"></p>    
+        </div>
+        <div class="botoes">
+        <button id="fire">Fogo</button>
+        <button id="water">Agua</button>
+        <button id="earth">Terra</button>
+    </div>
+        <div id="bibliotecaDeMemes">
+        <div id="meme-1">
+            <img src="imgs/meme1.png" alt="">
+        </div>
+        <div id="meme-2">
+            <img src="imgs/meme2.png" alt="">
+        </div>
+        <div id="meme-3">
+            <img src="imgs/meme3.png" alt="">
+        </div>
+        <div id="meme-4">
+            <img src="imgs/meme4.png" alt="">
+        </div>
+        </div>
+    <script src="script.js">
+        function toLimit(string = '') {
+  string.value = string.value.substring(0, 60);
+}
+</script>
+</body>
+</html>
