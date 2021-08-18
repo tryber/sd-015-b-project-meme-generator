@@ -30,7 +30,9 @@ img {
   bottom: 8px;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: x-large;
+  font-size: 30px;
+  text-shadow: 5px 5px 5px black;
+  color: white;
 }
 
 input {
