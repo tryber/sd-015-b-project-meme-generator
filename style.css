@@ -1,6 +1,6 @@
 
 body {
-  background-color: #DFB160;
+  background-color: #dfb160;
   font-family: 'Atkinson Hyperlegible', sans-serif;
   color: white;
 }
@@ -13,11 +13,9 @@ main {
 #meme-image-container {
   text-align: center;
   position: relative;
-  text-align: center;
   width: 450px;
   height: 450px;
   margin: auto;
-  /* border: solid 1px black; */
   background-color: white;
 }
 
@@ -41,18 +39,18 @@ input {
   margin: 10px;
 }
 
-input[type="text"], textarea {
-  background-color : #6E3562; 
+input[type='text'] , textarea {
+  background-color : #6e3562; 
   color: white;
 }
 
 label {
-  color: #34586E  ;
+  color: #34586e;
   font-weight: bolder;
 }
 
 #meme-insert {
-  background-color: #34586E;
+  background-color: #34586e;
   color: white;
 }
 
@@ -75,7 +73,7 @@ input#file-upload-button {
   border-radius: 10px;
 }
 
-#meme-1, #meme-2, #meme-3, #meme-4 {
+#meme-1 , #meme-2 , #meme-3 , #meme-4 {
   width: 70px;
   height: 70px;
   padding-top: 20px;
