@@ -4,9 +4,11 @@
     box-sizing: border-box;
 }
 
-
+h1 , h2{
+  text-align: center; 
+}
 span {
-    text-align: center;
+    
     margin-left: 460px;
 }
 
@@ -45,8 +47,8 @@ span {
   }
   
   #meme-image {
-    width: 400px;
-    height: 400px;
+    width: 399px;
+    height: 399px;
     position: absolute;
     display: block;
   }
@@ -56,6 +58,8 @@ span {
     border: solid red;
     border-radius: 8px;
     color: white;
+    margin-left: 570px;  
+    cursor: pointer;
   }
   
   #water {
@@ -63,6 +67,7 @@ span {
     border: solid blue;
     border-radius: 8px;
     color: white;
+    cursor: pointer;
   }
   
   #earth {
@@ -70,7 +75,14 @@ span {
     border: solid green;
     border-radius: 8px;
     color: white;
+    cursor: pointer;
   }
+
+ 
+
+
+
+  
   
   #meme-1 , #meme-2 , #meme-3 , #meme-4 {
     display: inline-block;
