@@ -4,9 +4,10 @@ const uploadBtn = document.getElementById('meme-insert');
 const meme = document.querySelector('img');
 const memeContainer = document.getElementById('meme-image-container');
 const btnContainer = document.getElementById('btn-container');
-// const fireBtn = document.getElementById('fire');
-// const waterBtn = document.getElementById('water');
-// const earthBtn = document.getElementById('earth');
+const temp1 = document.getElementById('meme-1');
+const temp2 = document.getElementById('meme-2');
+const temp3 = document.getElementById('meme-3');
+const temp4 = document.getElementById('meme-4');
 
 function getText() {
   textContainer.innerHTML = input.value;
@@ -35,3 +36,13 @@ function changeBorder(event) {
 }
 
 btnContainer.addEventListener('click', changeBorder);
+
+function loadTemplate(event) {
+  const img = event.target;
+  meme.src = img.src;
+}
+
+temp1.addEventListener('click', loadTemplate);
+temp2.addEventListener('click', loadTemplate);
+temp3.addEventListener('click', loadTemplate);
+temp4.addEventListener('click', loadTemplate);
