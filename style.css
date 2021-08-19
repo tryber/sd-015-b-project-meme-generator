@@ -56,7 +56,7 @@ h2 {
   font-family: “Open Sans”, sans-serif;
   color: whitesmoke;
   text-shadow: 0 -2px 4px white, 0 -2px 10px rgb(255 , 255 , 51),
-    0 -10px 20px rgb(255, 153, 0), 0 -20px 40px rgb(204, 51, 51);
+    0 -10px 20px rgb(255 , 153 , 0), 0 -20px 40px rgb(204 , 51 , 51);
 }
 
 #water {
@@ -66,7 +66,7 @@ h2 {
 }
 
 #water h3 {
-  color: #03a9f4;
+  color: rgb(3 , 169 , 244);
   animation: animate 4s ease-in-out infinite;
   margin: 0;
   top: 2px;
@@ -77,12 +77,12 @@ h2 {
 @keyframes animate {
 
   0% , 100% {
-  clip-path: polygon(0 42% , 10% 49% , 16% 56% , 24% 61% , 35% 58% ,43% 54% , 
+    clip-path: polygon(0 42% , 10% 49% , 16% 56% , 24% 61% , 35% 58% , 43% 54% ,
     54% 48% , 63% 45% , 73% 47% , 83% 53% , 92% 57% , 100% 53% , 100% 100% , 0 100%);
   }
 
   50% {
-  clip-path: polygon(0 67% , 13% 66% , 23% 61% , 34% 53% , 42% 47% ,51% 45% , 
+    clip-path: polygon(0 67% , 13% 66% , 23% 61% , 34% 53% , 42% 47% , 51% 45% ,
     59% 48% , 70% 55% , 78% 59% , 86% 63% , 97% 64% , 100% 65% , 100% 100% , 0 100%);
   }
 }
