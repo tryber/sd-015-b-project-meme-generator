@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <title>Meme Generator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Meme Generator</h1>
+    </header>
+    <section id="input-text">
+      <h2>Digite seu Texto</h2>
+      <textarea type="text" id="text-input" maxlength="60" rows="2" cols="40"></textarea>
+    </section>
+    <section id="choose-file">
+      <input type="file" id="get-file" hidden="hidden">
+      <button type="button" id="meme-insert">CHOOSE FILE</button>
+      <span id="text-file">No file Choose, yet</span>
+    </section>
+    <section id="meme-image-container">
+      <img alt="main-image" id="meme-image">
+      <span id="meme-text"></span>
+    </section>
+    <section id="customize-borders">
+      <button id="fire">Fire</button>
+      <button id="water" title="Water">
+        Water
+        <h3>Water</h3>
+      </button>
+      <button id="earth">Earth</button>
+    </section>
+    <section id="memes-conhecidos">
+      <div id="meme-1"><img src="/imgs/meme1.png"></div>
+      <div id="meme-2"><img src="/imgs/meme2.png"></div>
+      <div id="meme-3"><img src="/imgs/meme3.png"></div>
+      <div id="meme-4"><img src="/imgs/meme4.png"></div>
+    </section>
+  </body>
+  <script src="script.js"></script>
+</html>
