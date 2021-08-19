@@ -1,0 +1,23 @@
+#meme-image-container {
+  height: 500px;
+  width: 500px;
+  border: black solid 1px;
+  margin-top: 20px;
+  margin: 10px;
+  position: relative;
+}
+
+#meme-text {
+  margin-top: 430px;
+  font-size: 30px;
+  position: absolute;
+  margin-left: 20px;
+}
+
+#meme-image {
+  position: absolute;
+}
+
+.input-area {
+  padding: 10px;
+}
