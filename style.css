@@ -12,7 +12,8 @@ section {
 
 #meme-image-container {
   align-content: flex-end;
-  border: 2px solid black;
+  background-color: white;
+  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
