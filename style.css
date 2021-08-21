@@ -24,8 +24,10 @@ section {
 }
 
 #meme-text {
-  color: red;
+  text-shadow: 5px 5px 5px black;
+  color: white;
   display: flex;
+  font-size: 30px;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
