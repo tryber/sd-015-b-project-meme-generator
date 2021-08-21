@@ -10,10 +10,16 @@
 <body>
   <main>
     <section>
-      <label for="text-input">Texto: 
-        <input id="text-input" type="text" placeholder="Insira o seu texto aqui">
-      </label>
+      <div id="inputs">
+        <label for="text-input">Texto: 
+          <input id="text-input" type="text" placeholder="Insira o seu texto aqui">
+        </label>
+        <label for="meme-insert">Imagem: 
+          <input id="meme-insert" type="file">
+        </label>
+      </div>
       <div id="meme-image-container">
+        <img id="meme-image">
         <p id="meme-text"></p>
       </div>
     </section>
