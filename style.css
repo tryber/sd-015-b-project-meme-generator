@@ -2,8 +2,42 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(42, 42, 42);
+  background-image: url('imgs/memebk2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+header {
+  display: flex;
+  height: 200px;
+  justify-content: space-between;
+}
+
+header h2 {
+  background-image: url('imgs/memebk.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  color: white;
+  height: 100px;
+  margin: 0px 20%;
+  padding: 30px;
+  width: 200px;
+}
+
+header div {
+  background-image: url('imgs/dog-dogs.gif');
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  height: 100px;
+  width: 200px;
+}
+
 section {
-  margin: 10px auto;
+  margin: 30px auto;
 }
 
 #text-input {
