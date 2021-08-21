@@ -13,7 +13,6 @@ section {
 #meme-image-container {
   align-content: flex-end;
   background-color: white;
-  border: 1px solid black;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -42,4 +41,22 @@ section {
   height: 300px;
   width: 300px;
   z-index: 1;
+}
+
+#fire {
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  background-color: red;
+}
+
+#water {
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  background-color: blue;
+}
+
+#earth {
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  background-color: green;
 }

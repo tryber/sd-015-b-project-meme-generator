@@ -1,6 +1,8 @@
 const textInput = document.getElementById('text-input');
 const memeText = document.getElementById('meme-text');
 const memeImage = document.getElementById('meme-image');
+const memeContainer = document.getElementById('meme-image-container');
+memeContainer.style.border = '1px solid black';
 
 function textCreate() {
   memeText.innerText = textInput.value;
@@ -24,3 +26,22 @@ function imagemContain() {
 
 const memeInsert = document.getElementById('meme-insert');
 memeInsert.addEventListener('change', imagemContain);
+
+function changeBorder(evento) {
+  const fire = document.getElementById('fire');
+  const water = document.getElementById('water');
+  const earth = document.getElementById('earth');
+
+  if (evento.target === fire) {
+    memeContainer.style.border = '3px dashed red';
+  }
+  if (evento.target === water) {
+    memeContainer.style.border = '5px double blue';
+  }
+  if (evento.target === earth) {
+    memeContainer.style.border = '6px groove green';
+  }
+}
+
+const section = document.getElementById('meme-generator');
+section.addEventListener('click', changeBorder);
