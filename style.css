@@ -60,3 +60,9 @@ section {
   text-shadow: 5px 5px 5px black;
   background-color: green;
 }
+
+.meme-preview {
+  height: 100px;
+  margin: 10px;
+  width: 100px;
+}

@@ -45,3 +45,16 @@ function changeBorder(evento) {
 
 const section = document.getElementById('meme-generator');
 section.addEventListener('click', changeBorder);
+
+function changePreviewImage(evento) {
+  const memePreview = document.getElementsByClassName('meme-preview');
+
+  for (let index = 0; index < memePreview.length; index += 1) {
+    if (evento.target === memePreview[index]) {
+      memeImage.setAttribute('src', memePreview[index].src);
+    }
+  }
+}
+
+const imagePreview = document.getElementById('image-preview');
+imagePreview.addEventListener('click', changePreviewImage);
