@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(42, 42, 42);
+  background-color: rgb(42 , 42 , 42);
   background-image: url('imgs/memebk2.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -22,7 +22,7 @@ header h2 {
   display: inline-block;
   color: white;
   height: 100px;
-  margin: 0px 20%;
+  margin: 0 20%;
   padding: 30px;
   width: 200px;
 }
