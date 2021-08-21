@@ -27,14 +27,12 @@ section {
   color: white;
   display: flex;
   font-size: 30px;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-flow: column wrap;
   justify-content: center;
   align-content: flex-end;
   position: absolute;
   max-width: 250px;
   z-index: 2;
-  font-size: 30px;
 }
 
 #meme-image {
