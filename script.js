@@ -4,9 +4,6 @@ const textMeme = document.getElementById('meme-text');
 const memeImg = document.getElementById('meme-image');
 const inputImage = document.getElementById('meme-insert');
 const stylesContainer = document.getElementById('style-buttons');
-const fireStyle = document.getElementById('fire');
-const waterStyle = document.getElementById('water');
-const earthStyle = document.getElementById('earth');
 const famousContainer = document.getElementById('memes-famous');
 
 function textMemeOnPage() {
@@ -31,6 +28,7 @@ function previewImage() {
 function changeStyle(event) {
   const eventTarget = event.target;
   const idTarget = eventTarget.id;
+  imgContainer.style.border = '';
   imgContainer.className = idTarget;
 }
 
@@ -42,15 +40,17 @@ function selectFamous(event) {
   memeImg.setAttribute('src', insertedImage);
 }
 
+window.onload = () => {
+  imgContainer.style.border = '1px solid black';
+  for (let index = 0; index < stylesContainer.children.length; index += 1) {
+    const button = stylesContainer.children[index];
+    button.addEventListener('click', changeStyle);
+  }
+  for (let index = 1; index < famousContainer.children.length; index += 1) {
+    const meme = famousContainer.children[index];
+    meme.addEventListener('click', selectFamous);
+  }
+};
+
 inputText.addEventListener('keyup', textMemeOnPage);
 inputImage.addEventListener('change', previewImage);
-
-for (let index = 0; index < stylesContainer.children.length; index += 1) {
-  const button = stylesContainer.children[index];
-  button.addEventListener('click', changeStyle);
-}
-
-for (let index = 1; index < famousContainer.children.length; index += 1) {
-  const meme = famousContainer.children[index];
-  meme.addEventListener('click', selectFamous);
-}
