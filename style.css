@@ -6,22 +6,36 @@
 
 #meme-image-container {
   width: 800px;
-  height: 400px;
+  height: 450px;
   border: 1px solid black;
   background-color: white;
 }
 
 #meme-image {
   width: 798px;
-  height: 398px;
+  height: 448px;
   position: absolute;
   z-index: 0;
 }
 
 #meme-text {
+  width: 685px;
   position: absolute;
   z-index: 1;
   font-size: 30px;
   color: white;
   text-shadow: black 5px 5px 5px;
+  text-align: center;
+  top: 430px;
+  left: 65px;
+}
+
+#meme-insert {
+  margin-left: 10px;
+  height: 21px;
+  margin-bottom: 10px;
+}
+
+#text-input {
+  height: 21px;
 }
