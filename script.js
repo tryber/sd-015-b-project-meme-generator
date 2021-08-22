@@ -7,6 +7,7 @@ const stylesContainer = document.getElementById('style-buttons');
 const fireStyle = document.getElementById('fire');
 const waterStyle = document.getElementById('water');
 const earthStyle = document.getElementById('earth');
+const famousContainer = document.getElementById('memes-famous');
 
 function textMemeOnPage() {
   const textValue = inputText.value;
@@ -33,12 +34,23 @@ function changeStyle(event) {
   imgContainer.className = idTarget;
 }
 
+function selectFamous(event) {
+  const eventTarget = event.target;
+
+  const insertedImage = eventTarget.getAttribute('src');
+
+  memeImg.setAttribute('src', insertedImage);
+}
+
 inputText.addEventListener('keyup', textMemeOnPage);
 inputImage.addEventListener('change', previewImage);
 
-window.onload = () => {
-  for (let index = 0; index < stylesContainer.children.length; index += 1) {
-    const button = stylesContainer.children[index];
-    button.addEventListener('click', changeStyle);
-  }
-};
+for (let index = 0; index < stylesContainer.children.length; index += 1) {
+  const button = stylesContainer.children[index];
+  button.addEventListener('click', changeStyle);
+}
+
+for (let index = 1; index < famousContainer.children.length; index += 1) {
+  const meme = famousContainer.children[index];
+  meme.addEventListener('click', selectFamous);
+}

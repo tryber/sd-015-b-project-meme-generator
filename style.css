@@ -15,8 +15,8 @@
 }
 
 #meme-image {
-  width: 798px;
-  height: 448px;
+  width: 790px;
+  height: 440px;
   position: absolute;
   z-index: 0;
   border: 0;
@@ -58,4 +58,14 @@
 
 .earth {
   border: 6px groove green !important;
+}
+
+#memes-famous {
+  margin-top: 40px;
+}
+
+#memes-famous img {
+  width: 200px;
+  height: 112.48px;
+  margin: 10px;
 }
