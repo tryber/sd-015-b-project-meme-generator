@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+#meme-image {
+  position: relative;
+  z-index: 0;
+}
+
+#meme-text {
+  position: absolute;
+  z-index: 1;
+}
