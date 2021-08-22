@@ -3,6 +3,10 @@ const inputText = document.getElementById('text-input');
 const textMeme = document.getElementById('meme-text');
 const memeImg = document.getElementById('meme-image');
 const inputImage = document.getElementById('meme-insert');
+const stylesContainer = document.getElementById('style-buttons');
+const fireStyle = document.getElementById('fire');
+const waterStyle = document.getElementById('water');
+const earthStyle = document.getElementById('earth');
 
 function textMemeOnPage() {
   const textValue = inputText.value;
@@ -23,5 +27,18 @@ function previewImage() {
   }
 }
 
+function changeStyle(event) {
+  const eventTarget = event.target;
+  const idTarget = eventTarget.id;
+  imgContainer.className = idTarget;
+}
+
 inputText.addEventListener('keyup', textMemeOnPage);
 inputImage.addEventListener('change', previewImage);
+
+window.onload = () => {
+  for (let index = 0; index < stylesContainer.children.length; index += 1) {
+    const button = stylesContainer.children[index];
+    button.addEventListener('click', changeStyle);
+  }
+};

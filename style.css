@@ -5,6 +5,9 @@
 }
 
 #meme-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 800px;
   height: 450px;
   border: 1px solid black;
@@ -16,6 +19,7 @@
   height: 448px;
   position: absolute;
   z-index: 0;
+  border: 0;
 }
 
 #meme-text {
@@ -38,4 +42,20 @@
 
 #text-input {
   height: 21px;
+}
+
+#style-buttons {
+  margin-top: 20px;
+}
+
+.fire {
+  border: 3px dashed red !important;
+}
+
+.water {
+  border: 5px double blue !important;
+}
+
+.earth {
+  border: 6px groove green !important;
 }
