@@ -28,6 +28,8 @@ function inputTextMemeKeyPress() {
 function getImageFile() {
   const file = document.getElementById('meme-insert').files;
   const memeImage = document.getElementById('meme-image');
+  memeImage.style.width = '100%';
+  memeImage.style.height = '100%';
   if (file.length > 0) {
     const reader = new FileReader();
     reader.onload = (ev) => {
@@ -43,8 +45,44 @@ function inputGetImageFile() {
   memeInsert.addEventListener('change', getImageFile);
 }
 
+function changeToFire() {
+  const memeImageContainer = document.getElementById('meme-image-container');
+  memeImageContainer.style.border = '3px dashed red';
+}
+
+function borderFire() {
+  const fire = document.getElementById('fire');
+  fire.style.backgroundColor = 'red';
+  fire.addEventListener('click', changeToFire);
+}
+
+function changeToWater() {
+  const memeImageContainer = document.getElementById('meme-image-container');
+  memeImageContainer.style.border = '5px double blue';
+}
+
+function borderWater() {
+  const water = document.getElementById('water');
+  water.style.backgroundColor = 'blue';
+  water.addEventListener('click', changeToWater);
+}
+
+function changeToEarth() {
+  const memeImageContainer = document.getElementById('meme-image-container');
+  memeImageContainer.style.border = '6px groove green';
+}
+
+function borderEarth() {
+  const earth = document.getElementById('earth');
+  earth.style.backgroundColor = 'green';
+  earth.addEventListener('click', changeToEarth);
+}
+
 window.onload = function pageInit() {
   inputTextMemePaste();
   inputTextMemeKeyPress();
   inputGetImageFile();
+  borderFire();
+  borderWater();
+  borderEarth();
 };
