@@ -1,16 +1,26 @@
+const textInput = document.getElementById('text-input');
+const memeText = document.getElementById('meme-text');
+const memeInsert = document.getElementById('meme-insert');
+const memeImage = document.getElementById('meme-image');
+const memeImageContainer = document.getElementById('meme-image-container');
+const fire = document.getElementById('fire');
+const water = document.getElementById('water');
+const earth = document.getElementById('earth');
+const meme1 = document.getElementById('meme-1');
+const meme2 = document.getElementById('meme-2');
+const meme3 = document.getElementById('meme-3');
+const meme4 = document.getElementById('meme-4');
+
 function textMeme(event) {
   const paste = (event.clipboardData || window.clipboardData).getData('text');
-  const memeText = document.getElementById('meme-text');
   memeText.innerText = paste;
 }
 
 function inputTextMemePaste() {
-  const textInput = document.getElementById('text-input');
   textInput.addEventListener('paste', textMeme);
 }
 
 function textMemeKeyPress(event) {
-  const memeText = document.getElementById('meme-text');
   if (event.target.value.length < 60) {
     if (event.key === 'Enter') {
       memeText.innerText = event.target.value;
@@ -21,13 +31,11 @@ function textMemeKeyPress(event) {
 }
 
 function inputTextMemeKeyPress() {
-  const textInput = document.getElementById('text-input');
   textInput.addEventListener('keypress', textMemeKeyPress);
 }
 
 function getImageFile() {
-  const file = document.getElementById('meme-insert').files;
-  const memeImage = document.getElementById('meme-image');
+  const file = memeInsert.files;
   memeImage.style.width = '100%';
   memeImage.style.height = '100%';
   if (file.length > 0) {
@@ -41,41 +49,66 @@ function getImageFile() {
 }
 
 function inputGetImageFile() {
-  const memeInsert = document.getElementById('meme-insert');
   memeInsert.addEventListener('change', getImageFile);
 }
 
 function changeToFire() {
-  const memeImageContainer = document.getElementById('meme-image-container');
   memeImageContainer.style.border = '3px dashed red';
 }
 
 function borderFire() {
-  const fire = document.getElementById('fire');
   fire.style.backgroundColor = 'red';
   fire.addEventListener('click', changeToFire);
 }
 
 function changeToWater() {
-  const memeImageContainer = document.getElementById('meme-image-container');
   memeImageContainer.style.border = '5px double blue';
 }
 
 function borderWater() {
-  const water = document.getElementById('water');
   water.style.backgroundColor = 'blue';
   water.addEventListener('click', changeToWater);
 }
 
 function changeToEarth() {
-  const memeImageContainer = document.getElementById('meme-image-container');
   memeImageContainer.style.border = '6px groove green';
 }
 
 function borderEarth() {
-  const earth = document.getElementById('earth');
   earth.style.backgroundColor = 'green';
   earth.addEventListener('click', changeToEarth);
+}
+
+function changeMeme1() {
+  memeImage.src = meme1.src;
+}
+
+function imgChangeMeme1() {
+  meme1.addEventListener('click', changeMeme1);
+}
+
+function changeMeme2() {
+  memeImage.src = meme2.src;
+}
+
+function imgChangeMeme2() {
+  meme2.addEventListener('click', changeMeme2);
+}
+
+function changeMeme3() {
+  memeImage.src = meme3.src;
+}
+
+function imgChangeMeme3() {
+  meme3.addEventListener('click', changeMeme3);
+}
+
+function changeMeme4() {
+  memeImage.src = meme4.src;
+}
+
+function imgChangeMeme4() {
+  meme4.addEventListener('click', changeMeme4);
 }
 
 window.onload = function pageInit() {
@@ -85,4 +118,8 @@ window.onload = function pageInit() {
   borderFire();
   borderWater();
   borderEarth();
+  imgChangeMeme1();
+  imgChangeMeme2();
+  imgChangeMeme3();
+  imgChangeMeme4();
 };

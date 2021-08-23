@@ -24,7 +24,13 @@
 
 #meme-image {
   position: absolute;
+  margin: auto;
   width: 300px;
   height: 300px;
   z-index: 0;
+}
+
+.mini-images {
+  width: 80px;
+  height: 60px;
 }
