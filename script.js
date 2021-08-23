@@ -4,7 +4,6 @@ function textMeme(event) {
   memeText.innerText = paste;
 }
 
-
 function inputTextMemePaste() {
   const textInput = document.getElementById('text-input');
   textInput.addEventListener('paste', textMeme);
@@ -12,10 +11,12 @@ function inputTextMemePaste() {
 
 function textMemeKeyPress(event) {
   const memeText = document.getElementById('meme-text');
-  if (event.key === 'Enter') {
-    memeText.innerText = event.target.value;
-  } else {
-    memeText.innerText = event.target.value + event.key;
+  if (event.target.value.length < 60) {
+    if (event.key === 'Enter') {
+      memeText.innerText = event.target.value;
+    } else {
+      memeText.innerText = event.target.value + event.key;
+    }
   }
 }
 
