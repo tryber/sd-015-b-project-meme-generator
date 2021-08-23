@@ -1,0 +1,9 @@
+#meme-image-container {
+  position: relative;
+}
+
+#meme-text {
+  position: absolute;
+  top: 100px;
+  text-align: center;
+}
