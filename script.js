@@ -4,6 +4,12 @@ function textMeme(event) {
   memeText.innerText = paste;
 }
 
+
+function inputTextMemePaste() {
+  const textInput = document.getElementById('text-input');
+  textInput.addEventListener('paste', textMeme);
+}
+
 function textMemeKeyPress(event) {
   const memeText = document.getElementById('meme-text');
   if (event.key === 'Enter') {
@@ -11,11 +17,6 @@ function textMemeKeyPress(event) {
   } else {
     memeText.innerText = event.target.value + event.key;
   }
-}
-
-function inputTextMemePaste() {
-  const textInput = document.getElementById('text-input');
-  textInput.addEventListener('paste', textMeme);
 }
 
 function inputTextMemeKeyPress() {
@@ -41,8 +42,8 @@ function inputGetImageFile() {
   memeInsert.addEventListener('change', getImageFile);
 }
 
-// window.onload = function pageInit() {
+window.onload = function pageInit() {
   inputTextMemePaste();
   inputTextMemeKeyPress();
   inputGetImageFile();
-// };
+};
