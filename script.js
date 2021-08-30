@@ -36,15 +36,13 @@ function inputTextMemeKeyPress() {
 
 function getImageFile() {
   const file = memeInsert.files;
-  memeImage.style.width = '100%';
-  memeImage.style.height = '100%';
   if (file.length > 0) {
     const reader = new FileReader();
-    reader.onload = (ev) => {
-      const event = ev;
-      memeImage.setAttribute('src', event.target.result);
+    reader.onload = function upload(e) {
+      const output = e;
+      memeImage.setAttribute('src', output.target.result);
     };
-    reader.readAsDataURL(file[0]);
+    reader.readAsDataURL(memeInsert.files[0]);
   }
 }
 
