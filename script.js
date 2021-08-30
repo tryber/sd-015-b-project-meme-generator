@@ -34,16 +34,24 @@ function inputTextMemeKeyPress() {
   textInput.addEventListener('keypress', textMemeKeyPress);
 }
 
-function getImageFile() {
-  const file = memeInsert.files;
-  if (file.length > 0) {
-    const reader = new FileReader();
-    reader.onload = function upload(e) {
-      const output = e;
-      memeImage.setAttribute('src', output.target.result);
-    };
-    reader.readAsDataURL(memeInsert.files[0]);
-  }
+// function getImageFile() {
+//   const file = memeInsert.files;
+//   if (file.length > 0) {
+//     const reader = new FileReader();
+//     reader.onload = function upload(e) {
+//       const output = e;
+//       memeImage.setAttribute('src', output.target.result);
+//     };
+//     reader.readAsDataURL(memeInsert.files[0]);
+//   }
+// }
+
+function getImageFile(event) {
+  const output = memeImage;
+  output.src = URL.createObjectURL(event.target.files[0]);
+  output.onload = () => {
+    URL.revokeObjectURL(output.src);
+  };
 }
 
 function inputGetImageFile() {
