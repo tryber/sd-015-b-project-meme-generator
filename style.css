@@ -50,3 +50,42 @@ h1 {
   width: 820px;
   object-fit: fill;
 }
+
+#fire {
+  background-color: red;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 8px;
+  width: 100px;
+  border-radius: 25px;
+}
+
+#water {
+  background-color: blue;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 8px;
+  width: 100px;
+  border-radius: 25px;
+}
+
+#earth {
+  background-color: green;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 8px;
+  width: 100px;
+  border-radius: 25px;
+}
+
+#img-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box {
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+}
