@@ -1,7 +1,7 @@
 .content-wrapper {
   display: flex;
   flex-direction: column;
-  margin-left: 20px
+  margin-left: 20px;
 }
 
 .inputs-wrapper {
@@ -20,10 +20,10 @@
   display: inline;
   position: absolute;
   font-size: 30px;
-  color:rgb(255, 255, 255);
+  color: white;
   bottom: 30px;
   left: 30px;
-  text-shadow: rgb(0, 0, 0) 5px 5px 5px;
+  text-shadow: black 5px 5px 5px;
 }
 
 .relative-wrapper {
@@ -31,8 +31,8 @@
   width: 500px;
   height: 500px;
   position: relative;
-  background:rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);
+  background: white;
+  border: 1px solid black;
 }
 
 .memes-prontos {
@@ -41,7 +41,7 @@
   flex-direction: column;
 }
 
-.memes-prontos img{
+.memes-prontos img {
   width: 68px;
   height: 68px;
   margin-right: 10px;
